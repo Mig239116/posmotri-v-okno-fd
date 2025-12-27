@@ -1,3 +1,22 @@
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 *,
 *::before,
 *::after {
@@ -27,29 +46,27 @@ html {
   align-items: flex-end;
   gap: 30px;
   width: 1140px;
-  height: 534px;
 }
 
 .result {
+  display: flex;
   flex-direction: column;
   width: 711px;
-  height: 456px;
-  display: flex;
   gap: 16px;
+  margin-bottom: 5px;
 }
 
-.content_details {
-  width: 339px;
-  height: 534px;
-  gap: 26px;
+.content__details {
+  width: 399px;
+  gap: 24px;
   display: flex;
   flex-direction: column;
+  margin-top: 18px;
 }
 
 .result__video-container {
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
   position: relative;
 }
 
@@ -63,7 +80,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 54px;
+  
 }
 
 .search-form__fieldset {
@@ -86,11 +103,13 @@ html {
   border-top: 1px solid white;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
   line-height: 22px;
   padding: 0;
   width: 225px;
   appearance: none;
 }
+
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -112,12 +131,12 @@ html {
   line-height: 22px;
   text-align: center;
   cursor: pointer;
-  padding: 0;
+  padding: 6px 0;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
   align-self: flex-end;
 }
 
@@ -137,7 +156,6 @@ html {
   height: 19px;
   border: 1px solid #fff;
   position: relative;
-  padding: 1px;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -147,6 +165,8 @@ html {
   height: 15px;
   background-color: #fff;
   opacity: 0;
+  position: absolute;
+  margin: 1px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -155,7 +175,6 @@ html {
 
 .more-button {
   width: 100%;
-  height: 34px;
 }
 
 .content__list-container {
@@ -188,8 +207,8 @@ html {
 }
 
 .content__video-card-description-container {
-  flex-grow: 1;
-  margin-right: 5px;
+  width: 196px;
+  overflow: hidden;
 }
 
 .search-form__fieldset-title {
@@ -280,7 +299,8 @@ html {
   background: #545050;
 }
 
-.content__card-link:hover {
+.content__card-link:hover .content__video-card-title,
+.content__card-link:hover .content__video-card-description {
   text-decoration: underline;
 }
 
@@ -306,25 +326,6 @@ html {
 .result__video-container,
 .content__list-container {
   position: relative;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 /* Кастомный скроллбар */
